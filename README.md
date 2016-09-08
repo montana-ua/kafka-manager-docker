@@ -26,7 +26,35 @@ git clone https://github.com/intropro/kafka-manager-docker.git
 cd kafka-manager-docker/
 docker build -t <NAME:TAG> .
 ```
-Example of build command:
+*Example:*
 ```
 docker build -t kafka-manager:1.3.1.8 .
+```
+### Create a container
+####Quick start
+```
+docker run -d -p <YOUR-PORT>:9000 -e ZK_HOSTS=<YOUR-ZK-CLUSTER:YOUR-ZK-PORT> --name <YOUR-CONTAINER-NAME> intropro/kafka-manager
+```
+If you don't speficify ZK_HOST, then the default value "localhost:2181" will be used by a docker container.
+
+*Example:*
+```
+docker run -d -p 9000:9000 -e ZK_HOSTS=zkdv-kdc01.ea.intropro.com:2181 --name kafka-manager intropro/kafka-manager
+```
+###Manage a container
+A list of running containers.
+```
+docker ps
+```
+
+A list of all containers.
+```
+docker ps -a
+```
+
+start/stop/stats one or more containers
+```
+docker start <YOUR-CONTAINER-NAME>
+docker stop <YOUR-CONTAINER-NAME>
+docker stats <YOUR-CONTAINER-NAME>
 ```
