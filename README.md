@@ -45,13 +45,12 @@ docker run -d -p 9000:9000 -e ZK_HOSTS=zkdv-kdc01.ea.intropro.com:2181 --name ka
 ####Use own configuration file
 You can specify an own configuration file via environment variable KM_CONFIG
 ```
-docker run -d -p <YOUR-PORT>:9000 -e ZK\_HOSTS=<YOUR\_ZK\_CLUSTER:YOUR\_ZK\_PORT> -v <PATH\_TO\_LOCAL\_CONFIGDIR>:<CONTAINER\_MOUNT\_POINT> -e KMANAGER\_CONFIG=<CONTAINER\_MOUNT\_POINT>/<YOUR\_CONFIG\_FILE> --name <YOUR\_CONTAINER\_NAME> intropro/kafka-manager
+docker run -d -p <YOUR-PORT>:9000 -e ZK_HOSTS=<YOUR_ZK_CLUSTER:YOUR_ZK_PORT> -v <PATH_TO_LOCAL_CONFIGDIR>:<CONTAINER_MOUNT_POINT> -e KMANAGER_CONFIG=<CONTAINER_MOUNT_POINT>/<YOUR_CONFIG_FILE> --name <YOUR_CONTAINER_NAME> intropro/kafka-manager
 ```
 *Example:*
 ```
-docker run -d -p 9001:9000 -e ZK\_HOSTS=kmgr-kdc01.ea.intropro.com:2181 -v /opt/kmm-config:/mnt -e KMANAGER\_CONFIG=/mnt/application.conf --name kafka-manager intropro/kafka-manager
+docker run -d -p 9001:9000 -e ZK_HOSTS=kmgr-kdc01.ea.intropro.com:2181 -v /opt/kmm-config:/mnt -e KMANAGER_CONFIG=/mnt/application.conf --name kafka-manager intropro/kafka-manager
 ```
-
 
 ###Manage a container
 A list of running containers.
