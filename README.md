@@ -42,6 +42,18 @@ If you don't speficify ZK_HOST, then the default value "localhost:2181" will be 
 ```
 docker run -d -p 9000:9000 -e ZK_HOSTS=zkdv-kdc01.ea.intropro.com:2181 --name kafka-manager intropro/kafka-manager
 ```
+
+Another way is to use a docker-compose file.
+```
+docker-compose -f <PATH_TO_DOCKER_COMPOSE_FILE>.yml up -d
+```
+If your zookeeper service is not a localhost, then specify the ZK_HOST variable into docker-compose file.
+
+*Example:*
+```
+docker-compose -f /opt/docker/kafka-manager.yml up -d
+```
+
 ####Use own configuration file
 You can specify an own configuration file via environment variable KM_CONFIG
 ```

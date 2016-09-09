@@ -1,0 +1,9 @@
+version: '2'
+services:
+    kafka-manager:
+        image: intropro/kafka-manager
+        container_name: kafka-manager
+        ports:
+            - "9009:9000"
+        environment:
+            ZK_HOSTS: localhost:2181
