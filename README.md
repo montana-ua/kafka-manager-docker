@@ -34,7 +34,7 @@ docker build -t kafka-manager:1.3.1.8 .
 ### Create a container
 ####Quick start
 ```
-docker run -d -p <YOUR-PORT>:9000 -e ZK_HOSTS=<YOUR-ZK-CLUSTER:YOUR-ZK-PORT> --name <YOUR-CONTAINER-NAME> intropro/kafka-manager
+docker run -d -p <YOUR_PORT>:9000 -e ZK_HOSTS=<YOUR_ZK_CLUSTER:YOUR_ZK_PORT> --name <YOUR_CONTAINER_NAME> intropro/kafka-manager
 ```
 If you don't speficify ZK_HOST, then the default value "localhost:2181" will be used by a docker container.
 
@@ -52,6 +52,23 @@ docker run -d -p <YOUR-PORT>:9000 -e ZK_HOSTS=<YOUR_ZK_CLUSTER:YOUR_ZK_PORT> -v 
 docker run -d -p 9001:9000 -e ZK_HOSTS=kmgr-kdc01.ea.intropro.com:2181 -v /opt/kmm-config:/mnt -e KMANAGER_CONFIG=/mnt/application.conf --name kafka-manager intropro/kafka-manager
 ```
 
+####Pass aditional arguments to a container
+You can pass aditional arguments to a Kafka Manager container throught the JAVA_OPTS or/and KMANAGER_ARGS variables.
+
+*Example how to pass JAVA HEAP:*
+```
+docker run -d -p 9000:9000 -e ZK_HOSTS="kmgr-kdc01.ea.intropro.com:2181" -e JAVA_OPTS="-Xms512M -Xmx512M" --name kafka-manager-args intropro/kafka-manager
+```
+
+*Example how to pass JAVA HEAP and own arguments:*
+```
+docker run -d -p 9000:9000 -e ZK_HOSTS="kmgr-kdc01.ea.intropro.com:2181" -e JAVA_OPTS="-Xms512M -Xmx512M" -e KMANAGER_ARGS="-Dname=KafkaManager" --name kafka-manager-args intropro/kafka-manager
+```
+
+### Change a revision
+To upgrade or downgrade Kafka Manager change the KMANAGER_VERSION and KMANAGER_REVISION variables.
+You can also upgrade or downgrade Java version. Use for it JAVA_MAJOR, JAVA_UPDATE, JAVA_BUILD variables into the dockerfile.
+
 ###Manage a container
 A list of running containers.
 ```
@@ -65,7 +82,7 @@ docker ps -a
 
 start/stop/stats one or more containers
 ```
-docker start <YOUR-CONTAINER-NAME>
-docker stop <YOUR-CONTAINER-NAME>
-docker stats <YOUR-CONTAINER-NAME>
+docker start <YOUR_CONTAINER_NAME>
+docker stop <YOUR_CONTAINER_NAME>
+docker stats <YOUR_CONTAINER_NAME>
 ```
