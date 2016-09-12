@@ -5,7 +5,7 @@
 The latest version of docker image based on:
 * docker image - [oraclelinux:6.8](https://hub.docker.com/_/oraclelinux/)
 * java - [JDK 1.8.0_102](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* kafka manager - [1.3.1.8](https://github.com/yahoo/kafka-manager/releases/tag/1.3.1.8)
+* kafka manager - [1.3.1.6](https://github.com/yahoo/kafka-manager/releases/tag/1.3.1.6)
 
 The following actions will be performed by docker build:
 * install the additional packages (git, wget, tar, vim, mc, unzip, lsof)
