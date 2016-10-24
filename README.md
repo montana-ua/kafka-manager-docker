@@ -4,7 +4,7 @@
 ## Description
 The latest version of docker image based on:
 * docker image - [oraclelinux:6.8](https://hub.docker.com/_/oraclelinux/)
-* java - [JDK 1.8.0_102](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* java - [JDK 1.8.0_112](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * kafka manager - [1.3.1.8](https://github.com/yahoo/kafka-manager/releases/tag/1.3.1.8)
 
 The following actions will be performed by docker build:
@@ -19,7 +19,7 @@ The following actions will be performed by docker build:
 * set TERM=xterm
 
 ### Build an image
-If you need to build your own image based on the Dockerfile from [github](https://github.com/intropro/kafka-manager-docker.git), then you should to perform the following actions:
+If you need to build your own image based on the Dockerfile from [github](https://github.com/intropro/kafka-manager-docker.git), then you should perform the following actions:
 ```
 cd /tmp
 git clone https://github.com/intropro/kafka-manager-docker.git
