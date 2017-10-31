@@ -6,7 +6,7 @@ The latest version of the docker image is based on:
 
 * docker image - [oraclelinux:6.8](https://hub.docker.com/_/oraclelinux/)  
 * java - [JDK 1.8.0_112](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
-* kafka manager - [1.3.3.4](https://github.com/yahoo/kafka-manager/releases/tag/1.3.3.4)
+* kafka manager - [1.3.3.14](https://github.com/yahoo/kafka-manager/releases/tag/1.3.3.14)
 
 The following actions will be performed during building a docker image:  
 
@@ -34,7 +34,7 @@ rm -rf /tmp/kafka-manager-docker
 *Example:*
 
 ``` bash
-docker build -t kafka-manager:1.3.3.4 .
+docker build -t kafka-manager:1.3.3.14 .
 ```
 
 ### Create a container
