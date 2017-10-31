@@ -16,6 +16,7 @@ ENV JAVA_MAJOR=8 \
 COPY kmanager-start.sh /tmp/
 
 RUN mkdir -p /usr/share/info/dir && \
+  mkdir -p /usr/share/man/man1 && \
   yum update -y && \
   yum install -y git wget tar vim mc unzip lsof && \
   wget -nv --no-cookies --no-check-certificate \
