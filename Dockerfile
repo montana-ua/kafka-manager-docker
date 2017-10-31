@@ -3,8 +3,9 @@ FROM oraclelinux:6.8
 MAINTAINER IntroPro AMPADM team <ampadm@intropro.com>
 
 ENV JAVA_MAJOR=8 \
-  JAVA_UPDATE=112 \
-  JAVA_BUILD=15 \
+  JAVA_UPDATE=152 \
+  JAVA_BUILD=16 \
+  JAVA_DOWNLOAD_HASH=aa0333dd3019491ca4f6ddbe78cdb6d0 \
   JAVA_HOME=/usr/java/jdk1.${JAVA_MAJOR}.0_${JAVA_UPDATE} \
   ZK_HOSTS=localhost:2181 \
   KMANAGER_VERSION=1.3.3.14 \
@@ -19,7 +20,7 @@ RUN mkdir -p /usr/share/info/dir && \
   yum install -y git wget tar vim mc unzip lsof && \
   wget -nv --no-cookies --no-check-certificate \
     --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-    "http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm" -O /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm && \
+    "http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_DOWNLOAD_HASH}/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm" -O /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm && \
   yum localinstall -y /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm && \
   rm -f /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.rpm && \
   cd /tmp && \

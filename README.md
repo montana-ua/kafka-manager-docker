@@ -5,7 +5,7 @@
 The latest version of the docker image is based on:  
 
 * docker image - [oraclelinux:6.8](https://hub.docker.com/_/oraclelinux/)  
-* java - [JDK 1.8.0_112](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
+* java - [JDK 1.8.0_152](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
 * kafka manager - [1.3.3.14](https://github.com/yahoo/kafka-manager/releases/tag/1.3.3.14)
 
 The following actions will be performed during building a docker image:  
@@ -95,9 +95,7 @@ docker run -d -p 9000:9000 -e ZK_HOSTS="kmgr-kdc01.ea.intropro.com:2181" -e JAVA
 ```
 
 ### Change a revision
-To upgrade or downgrade Kafka Manager change the KMANAGER\_VERSION and KMANAGER\_REVISION variables. You can also upgrade or downgrade Java version via the JAVA\_MAJOR, JAVA\_UPDATE and JAVA\_BUILD variables into the dockerfile.  
-
->Please note that build of docker image will be failed with JAVA\_UPDATE above 112 !!!
+To upgrade or downgrade Kafka Manager change the KMANAGER\_VERSION and KMANAGER\_REVISION variables. You can also upgrade or downgrade Java version via the JAVA\_MAJOR, JAVA\_UPDATE, JAVA\_BUILD, and JAVA\_DOWNLOAD_HASH variables into the dockerfile.  
 
 ### Manage the docker container
 Show the list of running containers.  
