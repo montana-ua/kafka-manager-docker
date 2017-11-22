@@ -1,4 +1,4 @@
-FROM oraclelinux:6.8
+FROM oraclelinux:6.9
 
 MAINTAINER Sergey Vergun <sergey@vergun.in.ua>
 
@@ -41,6 +41,7 @@ RUN mkdir -p /usr/share/info/dir && \
   sed -i -e 's|INFO|ERROR|g' /opt/kafka-manager/conf/logger.xml && \
   mv /tmp/kmanager-start.sh /opt/kafka-manager/ && \
   chmod +x /opt/kafka-manager/kmanager-start.sh && \
+  yum autoremove -y git wget unzip && \
   yum clean all && \
   rm -fr /tmp/* /root/.sbt /root/.ivy2
 	
