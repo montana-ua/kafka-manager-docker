@@ -120,4 +120,4 @@ docker stats <YOUR_CONTAINER_NAME>
 
 
 ---
-support team - <ampadm@intropro.com>
+If you have a question or you want to get a support and customize this one for your specific task, please contact me <sergey@vergun.in.ua>
