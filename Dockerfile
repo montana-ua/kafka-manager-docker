@@ -1,6 +1,6 @@
 FROM oraclelinux:6.8
 
-MAINTAINER IntroPro AMPADM team <ampadm@intropro.com>
+MAINTAINER Sergey Vergun <sergey@vergun.in.ua>
 
 ENV JAVA_MAJOR=8 \
   JAVA_UPDATE=152 \
